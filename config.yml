@@ -1,0 +1,38 @@
+label: 'tenant-acapy'
+endpoint:
+  - 'http://tenant:8030'
+  - 'ws://tenant:8006'
+inbound-transport:
+  - [http, 0.0.0.0, 8030]
+  - [ws, 0.0.0.0, 8006]
+outbound-transport:
+  - http
+  - ws
+admin: [0.0.0.0, 8003]
+# TODO: ADMIN_API_KEY
+admin-insecure-mode: true
+#webhook-url: ${WEBHOOK_URL}
+auto-provision: true
+public-invites: true
+wallet-type: askar
+wallet-name: tenant_wallet
+wallet-key: ${WALLET_KEY}
+wallet-storage-type: sqlite
+wallet-storage-config: '{"path":"/data/tenant_wallet.db"}'
+multitenant: true
+multitenant-admin: true
+jwt-secret: ${JWT_SECRET}
+auto-provision: true
+no-ledger: true
+auto-accept-invites: true
+auto-accept-requests: true
+auto-respond-messages: true
+auto-respond-credential-offer: true
+auto-respond-credential-request: true
+auto-respond-presentation-request: true
+enable-undelivered-queue: true
+emit-new-didcomm-prefix: true
+emit-new-didcomm-mime-type: true
+auto-ping-connection: true
+log-level: info
+

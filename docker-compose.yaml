@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  tenant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8003" # Admin API
+      - "8006:8006" # WebSocket
+      - "8030:8030" # HTTP
+    volumes:
+      - tenant_data:/data
+    environment:
+      - ADMIN_API_KEY=secure-key
+      - JWT_SECRET=secure-jwt
+      - WALLET_KEY=secure-wallet-key
+networks:
+  default:
+    name: ticket-network
+volumes:
+  tenant_data:
+
