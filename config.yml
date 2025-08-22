@@ -9,7 +9,7 @@ outbound-transport:
   - http
   - ws
 admin: [0.0.0.0, 8003]
-# TODO: ADMIN_API_KEY
+# TODO: ADMIN_API_KEY 설정
 admin-insecure-mode: true
 webhook-url: ${WEBHOOK_URL}
 auto-provision: true
