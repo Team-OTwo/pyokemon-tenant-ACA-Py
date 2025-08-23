@@ -14,7 +14,7 @@ services:
       - ADMIN_API_KEY=secure-key
       - JWT_SECRET=secure-jwt
       - WALLET_KEY=secure-wallet-key
-      - WEBHOOK_URL=http://host.docker.internal:8084/backend/tenant/webhook
+      - WEBHOOK_URL=http://host.docker.internal:8084/did/backend/webhook/tenant
 networks:
   default:
     name: ticket-network

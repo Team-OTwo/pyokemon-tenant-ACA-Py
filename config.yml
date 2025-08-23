@@ -34,5 +34,5 @@ enable-undelivered-queue: true
 emit-new-didcomm-prefix: true
 emit-new-didcomm-mime-type: true
 auto-ping-connection: true
-log-level: info
+log-level: debug
 
